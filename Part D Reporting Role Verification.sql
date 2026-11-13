@@ -1,0 +1,1 @@
+SHOW GRANTS FOR 'hospital_reporting';

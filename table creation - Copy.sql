@@ -1,0 +1,12 @@
+use crownfield_hospital;
+-- CREATE TABLE Patient ( patient_id VARCHAR(10) PRIMARY KEY,first_name VARCHAR(50) NOT NULL,last_name VARCHAR(50) NOT NULL,postcode VARCHAR(10),phone VARCHAR(20) , email varchar(100)UNIQUE);
+-- CREATE TABLE clinic(clinic_name VARCHAR(100) ,address VARCHAR(255),phone_number VARCHAR(20) );
+-- CREATE TABLE clinician(clinicianID INT,specialtyID INT,first_name VARCHAR(50),last_name VARCHAR(50),phone_number VARCHAR(20),email VARCHAR(100) );
+-- Create Table specialty (SpecialtyID INT, specialty_name VARCHAR(100) NOT NULL, Description VArCHAR(255));
+-- CREATE TABLE Diagnosis (Diagnosis_ID INT PRIMARY KEY,Diagnosis_Name VARCHAR(100) NOT NULL,Description VARCHAR(255));
+-- CREATE TABLE Appointment_Diagnosis ( Appointment_ID INT NOT NULL,Diagnosis_ID INT NOT NULL,PRIMARY KEY (Appointment_ID, Diagnosis_ID));
+-- CREATE TABLE Prescription(Prescription_ID INT PRIMARY KEY,Appointment_ID INT NOT NULL,Prescription_Date DATE NOT NULL,Notes VARCHAR(255));
+-- CREATE TABLE Prescription_Item(Prescription_Item_ID INT PRIMARY KEY,Prescription_ID INT NOT NULL,Medicine_ID INT NOT NULL,Quantity INT NOT NULL,Dosage VARCHAR(50),Frequency VARCHAR(50),Route VARCHAR(50),Duration VARCHAR(50));
+-- CREATE TABLE Follow_UP(Followup_ID INT PRIMARY KEY,Appointment_ID INT NOT NULL,Followup_Date DATE NOT NULL,Notes VARCHAR(255),Status VARCHAR(20));
+-- CREATE TABLE Appointment(Appointment_ID INT PRIMARY KEY,Patient_ID VARCHAR(10) NOT NULL,Clinic_ID INT NOT NULL,Clinician_ID INT NOT NULL,Appointment_Date DATETIME NOT NULL,Status VARCHAR(20));
+CREATE TABLE Medicine (Medicine_ID INT PRIMARY KEY,Medicine_Name VARCHAR(100) NOT NULL,Description VARCHAR(255),Unit_Price DECIMAL(10,2) NOT NULL);
